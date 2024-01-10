@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+   <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  
+    <form id="loginForm">
+        <select id="userType" name="userType"نوع الحساب هو required>
+          <option value="student">طالب</option>
+          
+        </select>
+        <h2>تسجيل دخول للطلاب</h2>
+        <label for="username">اسم المستخدم او البريد الكتروني:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">كلمة المرور:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="button" onclick="handleLogin()">تسجيل الدخول</button>
+        <button type="button" onclick="handleAdminLogin()">تسجيل كمشرف</button>
+    </form>
+
+    <script>
+        function handleLogin() {
+            // يمكنك هنا إضافة التحقق من معلومات تسجيل الدخول
+
+            // إذا تم تأكيد صحة المعلومات، قم بإعادة توجيه المستخدم إلى صفحة المصممة
+            window.location.href = "options.html";
+
+            // إذا لم تكن المعلومات صحيحة، قم بإيقاف تقديم النموذج
+            // return false;
+        }
+
+        function handleAdminLogin() {
+            // يمكنك هنا إضافة التحقق من معلومات تسجيل الدخول للمشرف
+
+            // إذا تم تأكيد صحة المعلومات، قم بإعادة توجيه المستخدم إلى صفحة المشرف (m.html)
+            window.location.href = "m.html";
+
+            // إذا لم تكن المعلومات صحيحة، قم بإيقاف تقديم النموذج
+            // return false;
+        }
+    </script>
+
+</body>
+
+</html>
